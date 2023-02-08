@@ -51,6 +51,8 @@ public class menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         idText = new javax.swing.JTextField();
         limpiar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        nombre = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,8 +103,18 @@ public class menu extends javax.swing.JFrame {
         });
 
         jButton7.setText("PROCEDIMIENTO");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("FUNCION");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("RECORRER");
 
@@ -114,6 +126,8 @@ public class menu extends javax.swing.JFrame {
                 limpiarActionPerformed(evt);
             }
         });
+
+        jLabel2.setText("Nombre Buscar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,7 +164,11 @@ public class menu extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
@@ -172,7 +190,11 @@ public class menu extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(idText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(118, 118, 118)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(85, 85, 85)
                         .addComponent(jButton1)
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -198,7 +220,7 @@ public class menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        Hilo h = new Hilo(1, texto, idText);
+        Hilo h = new Hilo(1, texto, idText,nombre.getText().toString());
         h.start();
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -206,7 +228,7 @@ public class menu extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         
-        Hilo h = new Hilo(2, texto, idText);
+        Hilo h = new Hilo(2, texto, idText,nombre.getText().toString());
         h.start();
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -214,7 +236,7 @@ public class menu extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
         
-         Hilo h = new Hilo(3, texto, idText);
+         Hilo h = new Hilo(3, texto, idText,nombre.getText().toString());
         h.start();
         
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -222,7 +244,7 @@ public class menu extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
 
-        Hilo h = new Hilo(4, texto, idText);
+        Hilo h = new Hilo(4, texto, idText,nombre.getText().toString());
         h.start();
         
         
@@ -231,7 +253,7 @@ public class menu extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         
 
-        Hilo h = new Hilo(5, texto, idText);
+        Hilo h = new Hilo(5, texto, idText,nombre.getText().toString());
         h.start();
        
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -239,7 +261,7 @@ public class menu extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
 
-        Hilo h = new Hilo(6, texto, idText);
+        Hilo h = new Hilo(6, texto, idText,nombre.getText().toString());
         h.start();
        
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -248,6 +270,20 @@ public class menu extends javax.swing.JFrame {
         texto.setText("");
         idText.setText("");
     }//GEN-LAST:event_limpiarActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        
+        Hilo h = new Hilo(7, texto, idText,nombre.getText().toString());
+        h.start();
+      
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        
+        Hilo h = new Hilo(8, texto, idText,nombre.getText().toString());
+        h.start();  
+                
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,8 +332,10 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton limpiar;
+    private javax.swing.JTextField nombre;
     private javax.swing.JTextArea texto;
     // End of variables declaration//GEN-END:variables
 }

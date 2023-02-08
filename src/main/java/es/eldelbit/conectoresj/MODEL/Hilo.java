@@ -22,13 +22,15 @@ public class Hilo extends Thread{
     private JTextField idText;
     private Varios varios;
     private ClientesResource clientesResource;
+    private String nombre;
     
-    public Hilo(int i, JTextArea texto, JTextField id) {
+    public Hilo(int i, JTextArea texto, JTextField id, String nombre) {
         
         this.i = i;
         this.texto = texto;
         this.idText = id;
         varios = new Varios();
+        this.nombre = nombre;
         clientesResource = new ClientesResource();
            
     }
@@ -68,6 +70,15 @@ public class Hilo extends Thread{
                 
             case 6:
                 texto.append((idText.getText().isEmpty()?"FALTA LA ID":clientesResource.modificar(Integer.parseInt(idText.getText())))+"\n");
+
+                break;
+                
+            case 7:
+                texto.append((nombre.isEmpty()?"FALTA EL NOMBRE A FILTRAR":clientesResource.procedimiento(nombre))+"\n");
+                break;
+                
+            case 8:
+                texto.append((nombre.isEmpty()?"FALTA EL NOMBRE A FILTRAR":clientesResource.funcion(nombre))+"\n");
 
                 break;
             default:
