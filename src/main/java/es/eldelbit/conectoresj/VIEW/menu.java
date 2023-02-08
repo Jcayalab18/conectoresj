@@ -198,49 +198,49 @@ public class menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        
-        texto.append(varios.script() + "\n");
+        Hilo h = new Hilo(1, texto, idText);
+        h.start();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         
-        
-       texto.append(clientesResource.crearCliente()+"\n");
+        Hilo h = new Hilo(2, texto, idText);
+        h.start();
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
         
-       
-       texto.append(clientesResource.listar());
+         Hilo h = new Hilo(3, texto, idText);
+        h.start();
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        texto.append((idText.getText().isEmpty())?"FALTA LA ID\n":clientesResource.mostrar(Integer.parseInt(idText.getText()))+"\n");
 
-        
+        Hilo h = new Hilo(4, texto, idText);
+        h.start();
         
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         
-       texto.append((idText.getText().isEmpty()?"FALTA LA ID":clientesResource.borrar(Integer.parseInt(idText.getText())))+"\n");
 
-      
+        Hilo h = new Hilo(5, texto, idText);
+        h.start();
        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
-       texto.append((idText.getText().isEmpty()?"FALTA LA ID":clientesResource.modificar(Integer.parseInt(idText.getText())))+"\n");
 
-        
+        Hilo h = new Hilo(6, texto, idText);
+        h.start();
        
     }//GEN-LAST:event_jButton6ActionPerformed
 
