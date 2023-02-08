@@ -4,6 +4,8 @@
 
 package es.eldelbit.conectoresj;
 
+import es.eldelbit.conectoresj.VIEW.menu;
+
 /**
  *
  * @author alex
@@ -11,6 +13,11 @@ package es.eldelbit.conectoresj;
 public class Conectoresj {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        
+        menu m = new menu();
+        m.setVisible(true);
+        
+        
     }
 }
